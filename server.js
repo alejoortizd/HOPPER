@@ -21,7 +21,7 @@ passport.use(new GitHubStrategy({
 ));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
     res.render('index', {titulo: 'Mi pagina de login', login: 'Hola', href: '/login'})
